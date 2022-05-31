@@ -5,37 +5,55 @@
     font-family: 'Ubuntu', sans-serif;
   }
 
-.heading {
-  padding-bottom: 50px;
-  position: absolute;
-  top: 5%;
+  body {
+    background-color: rgb(78, 186, 125);
+    text-align: center;
+  }
 
+
+.heading {
+  font-size: 3rem;
+  margin-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.author {
+  font-size: 2em;
+  color: white;
+  padding-bottom: 20px;
 }
 
 
   .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
+  text-align: center;
   }
 
   
 
 .board {
-    display: grid;
+    /* display: grid;
     width: 400px;
     height: 400px;
     grid-template-columns: auto auto auto;
     top: 20%;
-    position: absolute;
+    position: absolute; */
+    position: relative;
+    display: inline-block;
+    margin: 70px auto;
+    width: 300px;
+    height: 300px;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .box {
-    display: flex;
+    /* display: flex;
     width: 135px;
     height: 135px;
     align-items: center;
@@ -43,11 +61,27 @@
     font-size: 3rem;
     font-weight: bold;
     border: 3px solid black;
-    color: black;
+    color: black; */
+
+    border: 6px solid #2c3e50;
+    border-radius: 2px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+  top: 0%;
+  left: 0%;
+  z-index: -10;
+  position: absolute;
 }
 
 
-#box-0,
+/* #box-0,
 #box-1,
 #box-2 {
   border-top: none;
@@ -69,13 +103,39 @@
 #box-5,
 #box-8 {
   border-right: none;
-}
+} */
 
 .clicked {
     pointer-events: none;
-    color: grey;
+    color: white;
 }
 
 .game-end {
     pointer-events: none;
 }
+
+
+
+@media (max-width: 500px) {
+  .board {
+    /* display: grid;
+    width: 400px;
+    height: 400px;
+    grid-template-columns: auto auto auto;
+    top: 20%;
+    position: absolute; */
+    position: relative;
+    display: inline-block;
+    margin: 150px auto;
+    width: 300px;
+    height: 300px;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+}
+
