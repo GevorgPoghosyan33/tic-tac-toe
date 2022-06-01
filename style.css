@@ -18,6 +18,20 @@
 
 }
 
+.animateheading {
+  animation: headinganim 1s;
+}
+
+
+@keyframes headinganim {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
 .author {
   font-size: 2em;
   color: white;

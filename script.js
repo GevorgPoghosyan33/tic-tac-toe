@@ -74,6 +74,7 @@ window.onload = () => {
         for(combo of WIN_COBOS) {
                 if(player_1_moves.includes(combo[0]) && player_1_moves.includes(combo[1]) && player_1_moves.includes(combo[2])){
                     heading.textContent = "X's Won"
+                    heading.classList.add("animateheading")
                     confetti({
                         particleCount: 100,
                         startVelocity: 30,
@@ -88,6 +89,7 @@ window.onload = () => {
                     break
                 } else if (player_2_moves.includes(combo[0]) && player_2_moves.includes(combo[1]) && player_2_moves.includes(combo[2])){
                     heading.textContent = "O's Won"
+                    heading.classList.add("animateheading")
                     confetti({
                         particleCount: 100,
                         startVelocity: 30,
